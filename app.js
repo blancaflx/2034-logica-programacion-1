@@ -1,15 +1,17 @@
 //Variables
-let numeroSecreto = Math.floor(Math.random()*10) + 1;
+let numeroMaximo = parseInt(prompt("Ingresa el valor máximo con el que desea jugar:"));
+let numeroSecreto = Math.floor(Math.random()*numeroMaximo) + 1;
 let numeroUsuario = 0;
 let intentos = 1;
 let palabraVeces = 'intento';
 let maximosIntentos = 3;
 
+
 console.log(`Numero secreto: ${numeroSecreto}`)
 
 while(numeroUsuario != numeroSecreto){
 
-    numeroUsuario = parseInt(prompt("Me indicas un número entre 1 y 10 por favor:"));
+    numeroUsuario = parseInt(prompt(`Me indicas un número entre 1 y ${numeroMaximo} por favor:`));
 
     console.log(typeof(numeroUsuario));
     console.log("numero secreto "+numeroSecreto);
